@@ -8,10 +8,15 @@ const submitForm = (event) => {
 
     const formData = new FormData(formEl);
 
-    console.log([...formData.entries()]);
-    console.log([...formData.values()]);
+    const recordObj = Object.fromEntries(formData);
+
+    // console.log([...formData.entries()]);
+    // console.log([...formData.values()]);
+    //console.log(createRecord([recordObj]));
+
+    createRecord(recordObj);
     // updated UI Logic
-    // updateUI();
+    updateUI();
 };
 
 formEl.addEventListener("submit", submitForm);
