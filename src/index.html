@@ -8,9 +8,257 @@
     <link rel="stylesheet" href="/dist/output.css" />
 </head>
 
-<body>
-    <h1>Hello</h1>
-    <h1 class="text-orange-500">Hello World</h1>
-</body>
+<body class="bg-gray-200">
+    <header class="bg-indigo-900 text-center p-10">
+        <h1 class="font-black text-orange-500 uppercase text-2xl">Ranjith</h1>
+        <p class="text-gray-300 mt-2 font-semibold">
+            Free education for everyone
+        </p>
+    </header>
+    <main class="m-10 flex gap-5 ">
+        <div class="bg-white p-5 rounded flex-1 shadow">
+            <h3 class="text-sm font-semibold">
+                Get Free Internship @ Ranjith Net Works
+            </h3>
+            <p class="text-xs text-gray-600 mt-1">
+                Get yourself skilled by joining Ranjith Net Works
+            </p>
+            <!-- form start-->
+            <form action="" class="my-5">
+                <div class="grid grid-cols-2 gap-x-5 gap-y-4">
+                    <div class="text-xs">
+                        <label for="fullName" class="block text-gray-800">Full Name</label
+            >
+            <input
+              type="text"
+              placeholder="Full Name"
+              name="fullName"
+              id="fullName"
+              class="input"
+              required
+            />
+          </div>
+          <div class="text-xs">
+            <label for="gender" class="block text-gray-800">Gender</label>
+                        <div class="mt-2 space-x-2 flex">
+                            <label class="flex"><input
+                  type="radio"
+                  name="gender"
+                  id="gender"
+                  value="Male"
+                  required
+                />
+                <span class="ml-1">Male</span>
+              </label>
+                            <label class="flex"><input
+                  type="radio"
+                  name="gender"
+                  id="gender"
+                  value="Female"
+                  required
+                />
+                <span class="ml-1">Female</span>
+              </label>
+                            <label class="flex"><input
+                  type="radio"
+                  name="gender"
+                  id="gender"
+                  value="Others"
+                  required
+                />
+                <span class="ml-1">Others</span>
+              </label>
+                        </div>
+                    </div>
+                    <div class="text-xs">
+                        <label for="emailAddress" class="block text-gray-800">Email Address</label
+            >
+            <input
+              type="email"
+              name="email"
+              placeholder="you@wonderful.com"
+              id="emailAddress"
+              class="input"
+              required
+            />
+          </div>
+          <div class="text-xs">
+            <label for="dob" class="block text-gray-800">Date of Birth</label>
+                        <input type="date" name="dob" placeholder="D.O.B" id="dob" class="input" required />
+                    </div>
+                    <div class="text-xs">
+                        <label for="skillKnown" class="block text-gray-800">What skill do you know already?</label
+            >
+            <input
+              type="text"
+              placeholder="Skills separated by;"
+              id="skillKnown"
+              name="skillKnown"
+              class="input"
+              required
+            />
+          </div>
+          <div class="text-xs">
+            <label for="experience" class="block text-gray-800"
+              >Experience?</label
+            >
+            <select name="experience" id="experience" class="input" required>
+              <option value="">Select Experience</option>
+              <option value="0.6">Less then 6 Month</option>
+              <option value="2">Less then 2 Years</option>
+              <option value="3">Less then 3 Years</option>
+              <option value="5">Less then 5 Years</option>
+            </select>
+          </div>
+          <div class="text-xs">
+            <label for="career_changed" class="block text-gray-800"
+              >Did Ranjith Net Works Change Your Career ?</label
+            >
+            <textarea
+              type="text"
+              placeholder="Explain briefly in 250 words."
+              id="career_changed"
+              name="career_changed"
+              class="input"
+              required
+            ></textarea>
+          </div>
+          <div class="text-xs">
+            <label for="course_completions" class="block text-gray-800"
+              >Have you Attended any course completions ?</label
+            >
+            <textarea
+              type="text"
+              placeholder="If any, explain briefly."
+              id="course_completions"
+              name="course_completions"
+              class="input"
+              required
+            ></textarea>
+          </div>
+          <div class="text-xs w-full">
+            <label for="studies" class="block text-gray-800"
+              >Studies & Year of Graduation</label
+            >
+            <input
+              type="text"
+              placeholder="B.E, 2020"
+              id="studies"
+              name="studies"
+              class="input"
+              required
+            />
+          </div>
+          <div></div>
+          <div class="text-xs w-full">
+            <label for="linkedin" class="block text-gray-800"
+              >LinkedIn Profile</label
+            >
+            <input
+              type="url"
+              placeholder="LinkedIn URL"
+              id="linkedin"
+              name="linkedin"
+              class="input"
+              required
+            />
+          </div>
+          <div class="text-xs w-full">
+            <label for="github" class="block text-gray-800"
+              >Github Profile</label
+            >
+            <input
+              type="url"
+              placeholder="Github URL"
+              id="github"
+              name="github"
+              class="input"
+              required
+            />
+          </div>
+          <div class="text-xs w-full col-span-2">
+            <label for="reason" class="block text-gray-800"
+              >Why you need to join this internship ?</label
+            >
+            <textarea
+              type="text"
+              placeholder="Explain briefly in 250 words."
+              id="reason"
+              name="reason"
+              class="input"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div class="col-span-2">
+            <label for="terms" class="text-xs flex">
+              <input type="checkbox" name="terms" id="terms" required />
+              <span class="ml-2">
+                I Accept the
+                <a href="#termsContent" class="text-orange-600"
+                  >terms and conditions</a
+                >
+                mentioned above.</span
+              ></label
+            >
 
+            <label for="terms" class="text-xs mt-5 flex">
+              <input type="checkbox" name="terms" id="terms" required />
+              <span class="ml-2">
+                I Accept I need the following requirements to proceed this
+                internship.
+              </span></label
+            >
+          </div>
+          <div class="col-span-2">
+            <button
+              class="px-4 py-1 bg-orange-600 text-sm text-white rounded"
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- form end -->
+    </div>
+    <div class="bg-white p-5 rounded w-96 h-fit shadow" id="termsContent">
+      <h3 class="text-sm font-semibold capitalize">Terms and conditions</h3>
+      <p class="text-xs mt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum
+        non quos fugit. Corrupti, optio! Voluptatem dolores esse hic
+        asperiores quae quidem magni ut et soluta voluptatibus aliquam, vel
+        sint quisquam. Temporibus quod ea nulla doloremque possimus?
+        <br /><br />
+        Dolorum laboriosam quam eligendi facilis voluptatem, eveniet voluptate
+        delectus nobis dolorem! Nisi deleniti, omnis nesciunt eos rerum
+        tempore magnam nobis labore? Voluptates nostrum quod quas, nobis
+        provident numquam nesciunt, ullam id saepe vero nihil,<br /><br />
+        <ul class="text-xs list-disc p-5 space-y-2"><li>
+          fugiat sed deleniti. Neque fugiat consectetur cumque blanditiis natus
+        </li>
+        <li> ducimus magni, impedit vero, cupiditate, voluptates debitis. Quia rem</li>
+        <li>  esse odio. Ducimus molestiae cupiditate ipsum a voluptas aspernatur </li>
+         <li> doloribus soluta deleniti nulla nesciunt accusamus et voluptate </li>
+         <li> deserunt, quasi odit repellendus tempora .</li>
+      </ul>
+       
+     
+      </p>
+    </div>
+    
+  </main>
+    <section class="bg-white max-w-xl p-10 m-10  mx-auto rounded hidden" id="formSubmitted">
+      <div class="flex space-x-4">
+        <div class="text-4xl">😍</div>
+       <div>
+        <h1 class="font-xl font-semibold">Thank you . We Received Your Application.</h1>
+        <p class="text-sm text-gray-600 mt-2">Your Application has been Successfully registered.</p>
+        <button class="px-4 py-1 bg-blue-500 text-white text-xs rounded my-2">Share</button>
+       </div>
+      </div>
+    </section>
+</body>
+<!-- script -->
+<script src="./js/main.js"></script>
 </html>
