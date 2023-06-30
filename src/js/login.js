@@ -23,6 +23,14 @@ const handleLoginForm = (event) => {
                 alert(`UserName/Password doesn't exist`);
             }
 
+            if (errorCode === "auth/wrong-password") {
+                alert("Password Invalid!");
+            }
+
+            if (errorCode === "auth/too-many-request") {
+                alert("Tried too much ... After 5 Minutes. ");
+            }
+
             loginFormEl.reset();
         });
 };
