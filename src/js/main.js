@@ -2,21 +2,31 @@ const maiEl = document.querySelector("main");
 const successfulUIEL = document.getElementById("formSubmitted");
 const formEl = document.querySelector("form");
 
+const validateForm = () => {
+    const formInputsEl = formEl.querySelectorAll("input, select, textarea");
+
+    let isFormDirty = true;
+    formInputsEl.forEach((field) => {
+        if (!field.hasAttribute("required")) {
+            field.required = true;
+            isFormDirty = false;
+        }
+    });
+    return isFormDirty;
+};
+
 const submitForm = (event) => {
     event.preventDefault();
-    // console.log("Submited", event);
+    // do validation here
 
-    const formData = new FormData(formEl);
+    if (validateForm()) {
+        const formData = new FormData(formEl);
+        const recordObj = Object.fromEntries(formData);
 
-    const recordObj = Object.fromEntries(formData);
-
-    // console.log([...formData.entries()]);
-    // console.log([...formData.values()]);
-    //console.log(createRecord([recordObj]));
-
-    createRecord(recordObj);
-    // updated UI Logic
-    updateUI();
+        createRecord(recordObj);
+        // updated UI Logic
+        updateUI();
+    }
 };
 
 formEl.addEventListener("submit", submitForm);

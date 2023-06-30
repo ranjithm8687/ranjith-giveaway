@@ -13,16 +13,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-
-// const person = {
-//     name: "Ranjith",
-//     place: "Namakkal",
-// };
+const auth = firebase.auth();
 
 const createRecord = (record) => {
-    // console.log("record", record);
-    //console.log(`record ${record}`);
-
     return db
         .collection("requests")
         .add(record)
@@ -32,4 +25,23 @@ const createRecord = (record) => {
         .catch((error) => {
             console.error("Error adding document: ", error);
         });
+};
+
+const loginUser = (email, password) => {
+    return new Promise((resolve, reject) => {
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                // Signed in
+                let user = userCredential.user;
+                resolve(user);
+                // ...
+                // console.log("User successfully login", user);
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                reject({ errorCode, errorMessage });
+            });
+    });
 };
